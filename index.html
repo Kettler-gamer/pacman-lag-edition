@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man</title>
+    <link rel="stylesheet" href="./assets/stylesheet/main.css" />
+  </head>
+  <body onkeydown="onKeyPress(event)">
+    <button onclick="startGameClick()">START GAME</button>
+    <span>SCORE: <span id="scoreText">0</span></span>
+    <div class="roundCont">
+      <h2 class="roundText" style="opacity: 0">Round: 1</h2>
+    </div>
+    <div class="playfield">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="up"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="up"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+
+      <div></div>
+
+      <div class="roundDownLeft"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="down"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="down"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="up"></div>
+      <div class="up down"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="up"></div>
+      <div class="up"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="left"></div>
+      <div class="up down"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="right"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="up"></div>
+      <div class="up"></div>
+
+      <div class="coin-block"></div>
+      <div class="coin-block"></div>
+      <div class="right"></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div class="left"></div>
+      <div class="coin-block"></div>
+      <div class="coin-block"></div>
+
+      <div class="down"></div>
+      <div class="down"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="up left"></div>
+      <div class="up"></div>
+      <div class="enemy"></div>
+      <div class="up"></div>
+      <div class="up right"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="down"></div>
+      <div class="down"></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left"></div>
+      <div class="enemy"></div>
+      <div class="enemy"></div>
+      <div class="enemy"></div>
+      <div class="right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="up"></div>
+      <div class="up"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div class="left down"></div>
+      <div class="down"></div>
+      <div class="down"></div>
+      <div class="down"></div>
+      <div class="right down"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="up"></div>
+      <div class="up"></div>
+      <div class="down"></div>
+      <div class="down"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="down"></div>
+      <div class="down"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="up"></div>
+      <div class="up down"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left right"></div>
+      <div></div>
+      <div></div>
+
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="player"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft roundUpRight"></div>
+      <div></div>
+      <div class="roundDownLeft roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="left"></div>
+      <div class="up down"></div>
+      <div class="up down"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="up down"></div>
+      <div class="right"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div class="roundUpLeft roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="up down"></div>
+      <div class="roundDownRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundDownLeft"></div>
+      <div class="up down"></div>
+      <div class="up down"></div>
+      <div class="roundUpRight roundDownRight"></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="roundUpLeft"></div>
+      <div class="up"></div>
+      <div class="up"></div>
+      <div class="up"></div>
+      <div class="roundUpRight"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <script src="./assets/scripts/app.js" defer></script>
+  </body>
+</html>

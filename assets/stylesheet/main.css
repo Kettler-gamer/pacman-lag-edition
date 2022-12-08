@@ -1,0 +1,124 @@
+body {
+  position: relative;
+  width: 99.5vw;
+}
+body button:first-child {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  color: yellow;
+  background-color: rgb(2, 0, 24);
+  border-radius: 10em;
+  padding: 1em 2em;
+  font-size: 1rem;
+}
+body button:first-child:hover {
+  background-color: blue;
+}
+body span:nth-child(2) {
+  text-align: center;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+body .roundCont {
+  position: relative;
+  width: 850px;
+  z-index: 5;
+  margin: 15em auto 0 auto;
+}
+body .roundCont .roundText {
+  position: relative;
+  margin: 0 auto -10.25em auto;
+  text-align: center;
+  color: yellow;
+  width: 300px;
+}
+
+.playfield {
+  margin: 0 auto 0 auto;
+  background-color: rgb(2, 0, 24);
+  display: flex;
+  flex-wrap: wrap;
+  width: 850px;
+  border: 10px solid blue;
+  border-radius: 2%;
+}
+.playfield div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.playfield .roundDownLeft,
+.playfield .roundDownRight,
+.playfield .roundUpRight,
+.playfield .roundUpLeft {
+  width: 49px;
+  height: 49px;
+}
+.playfield .roundUpLeft {
+  border-top: 1px solid blue;
+  border-left: 1px solid blue;
+  border-top-left-radius: 25%;
+}
+.playfield .roundUpRight {
+  border-top: 1px solid blue;
+  border-right: 1px solid blue;
+  border-top-right-radius: 25%;
+}
+.playfield .roundDownLeft {
+  border-bottom: 1px solid blue;
+  border-left: 1px solid blue;
+  border-bottom-left-radius: 25%;
+}
+.playfield .roundDownRight {
+  border-bottom: 1px solid blue;
+  border-right: 1px solid blue;
+  border-bottom-right-radius: 25%;
+}
+.playfield .up {
+  border-top: 1px solid blue;
+  height: 49px;
+}
+.playfield .down {
+  border-bottom: 1px solid blue;
+  height: 49px;
+}
+.playfield .left {
+  border-left: 1px solid blue;
+  width: 49px;
+}
+.playfield .right {
+  width: 49px;
+  border-right: 1px solid blue;
+}
+.playfield .roundDownLeft.roundDownRight {
+  width: 48px;
+}
+.playfield .roundUpLeft.roundDownLeft,
+.playfield .roundUpRight.roundDownRight {
+  height: 48px;
+}
+.playfield .roundUpLeft.roundUpRight,
+.playfield .left.right {
+  width: 48px;
+}
+.playfield .up.down {
+  height: 48px;
+}
+.playfield .coin {
+  background-color: orange;
+  border-radius: 25%;
+  width: 15px;
+  height: 15px;
+}
+.playfield .player {
+  background-color: yellow;
+  border-radius: 100%;
+}
+.playfield .enemy {
+  background-color: red;
+  border-radius: 100%;
+}/*# sourceMappingURL=main.css.map */
